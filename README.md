@@ -125,7 +125,7 @@ Contributions are welcome. Please open an issue or submit a pull request if you 
 
 ## Acknowledgments
 
-- **Data:** Sourced from Kaggle’s animal images dataset.
+- **Data:** Sourced from [Kaggle’s animal images dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/animal-image-dataset-90-different-animals).
 - **Models:**  
   - Open-Source: `LlaVa` variants, `Llama` models and `minicpm-v`  
   - Closed-Source: Gemini, GPT-4o, etc.
