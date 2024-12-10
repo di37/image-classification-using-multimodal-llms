@@ -1,7 +1,6 @@
 # Evaluating Multimodal LLMs on Image Classification: A Comparative Analysis of Open-Source and Proprietary Models
 
-**Short Description:**  
-This project evaluates and compares the performance of various multimodal Large Language Models (LLMs)—both open-source and closed-source—on an animal image classification task. The repository demonstrates data sampling, model inference, output normalization, and comprehensive evaluation of accuracy, precision, recall, and F1 scores. It also explores trade-offs in inference time, data handling, and output formatting, ultimately providing insights into how different models fare in visual classification.
+This project evaluates and compares the performance of various multimodal Large Language Models (LLMs)—both open-source and closed-source—on an animal image classification task. The repository demonstrates data sampling, model inference, output normalization, and comprehensive evaluation of accuracy, precision, recall, F1 scores. It also explores trade-offs in inference time, data handling, and output formatting, ultimately providing insights into how different models fare in visual classification.
 
 ---
 
@@ -114,7 +113,7 @@ This project evaluates and compares the performance of various multimodal Large 
 - **Trade-Offs:**  
   Closed-source models may yield perfect results but at higher latency and possibly less flexibility. Open-source models run locally and faster but may need some refinement and prompt tuning.
 
-Please read the article for in-depth analysis:
+[Please read the article for in-depth analysis.](https://medium.com/@d.isham.ai93/evaluating-multimodal-llms-on-image-classification-a-comparative-analysis-of-open-source-and-077c5fc8a9d3)
 
 ---
 
