@@ -34,9 +34,6 @@ This project evaluates and compares the performance of various multimodal Large 
 - **`image_classification/`**  
   Contains core logic for performing image classification using various models, handling prompts, and evaluating outputs.
 
-- **`logs/`**  
-  Stores log files (e.g., `running_logs.log`) generated during model runs and data processing.
-
 - **`notebooks/`**  
   Jupyter notebooks outlining each stage of the workflow:  
   1. **Data Gathering & Sampling:** Selecting a subset of animal images.  
@@ -45,15 +42,13 @@ This project evaluates and compares the performance of various multimodal Large 
   4. **Model Evaluation:** Computing metrics, plotting confusion matrices, and analyzing results.
 
 - **`utilities/`**  
-  Provides helper scripts, constants, and command-line utilities (e.g., `classify.py`) that simplify repetitive tasks and support the main codebase.
+  Provides helper scripts, constants, and command-line utilities (that simplify repetitive tasks and support the main codebase.
 
-**Additional Files:**
-
-- **`classify.py`** (in `utilities`):  
+- **`classify.py`**  
   A script to run classification across various models, generating CSV results.
 
 - **`.env` & Configuration Files:**  
-  May store environment variables or keys required to access closed-source models or external APIs.
+  May store environment variables or keys required to access closed-source models.
 
 - **`README.md`** (this file):  
   A high-level overview of the entire project, guiding users through setup and usage.
@@ -64,7 +59,7 @@ This project evaluates and compares the performance of various multimodal Large 
 
 **Prerequisites:**
 
-- Python 3.8+  
+- Python 3.10+  
 - A virtual environment (recommended)
 - Required packages listed in `requirements.txt` (if provided).
 
@@ -72,19 +67,19 @@ This project evaluates and compares the performance of various multimodal Large 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   git clone https://github.com/di37/multimodal-image-classification.git
    ```
 2. Change into the project directory:
    ```bash
-   cd yourproject
+   cd multimodal-image-classification
    ```
 3. Set up a virtual environment and install dependencies:
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   conda create -n image_classification python=3.10
+   conda activate image_classification
    pip install -r requirements.txt
    ```
-4. Add any necessary API keys or model credentials to your `.env` file (if applicable).
+4. Add any necessary API keys or model credentials to your `.env` file.
 
 ---
 
@@ -96,7 +91,7 @@ This project evaluates and compares the performance of various multimodal Large 
 2. **Classification:**  
    Run the classification script to process all images:
    ```bash
-   python utilities/classify.py
+   python classify.py
    ```
    This will invoke all models (open-source and closed-source) and store results in the `data/` directory.
 
@@ -119,6 +114,8 @@ This project evaluates and compares the performance of various multimodal Large 
 - **Trade-Offs:**  
   Closed-source models may yield perfect results but at higher latency and possibly less flexibility. Open-source models run locally and faster but may need some refinement and prompt tuning.
 
+Please read the article for in-depth analysis:
+
 ---
 
 ## Contributing
@@ -127,20 +124,11 @@ Contributions are welcome. Please open an issue or submit a pull request if you 
 
 ---
 
-## License
-
-Specify the license under which your project is distributed, for example:
-```
-MIT License
-```
-
----
-
 ## Acknowledgments
 
 - **Data:** Sourced from Kaggle’s animal images dataset.
 - **Models:**  
-  - Open-Source: LLaMA-based models and `minicpm-v`  
+  - Open-Source: `LlaVa` variants, `Llama` models and `minicpm-v`  
   - Closed-Source: Gemini, GPT-4o, etc.
 - **Community:** Thanks to the open-source community and model developers for providing the tools and resources enabling this project.
 
